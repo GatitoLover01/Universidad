@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: rgb(204, 204, 255);
+}
+.header {
+  background: rgb(204, 204, 204);
+  height: 200px;
+  text-align: center;
+}
+#universidad {
+  font-size: 100px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.logo {
+  float: left;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.banner {
+  background: rgb(153, 153, 255);
+
+  height: 25px;
+}
+.menu {
+  text-align: center;
+}
