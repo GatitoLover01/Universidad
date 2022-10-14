@@ -109,7 +109,7 @@ body {
 .horario_prereinscripcion {
   position: relative;
   width: 90%;
-  height: 70%;
+  height: 75%;
   background: rgb(240, 240, 240);
   float: center;
   margin-left: 25px;
@@ -124,10 +124,6 @@ body {
   background: black;
   filter: blur(10px);
   z-index: -1;
-}
-.horario_prereinscripcion > a{
-  float: left;
-  margin-left: 20px;
 }
 .datos_alumno {
   position: relative;
