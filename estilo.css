@@ -83,7 +83,28 @@ body {
   z-index: -1;
 }
 /*---------ASPIRANTE---------*/
-
+.inscripcion {
+  text-align: center;
+}
+.datos_inscripcion {
+  position: relative;
+  width: 900px;
+  height: 550px;
+  background: rgb(240, 240, 240);
+  float: center;
+  margin-left: 25px;
+}
+.datos_inscripcion::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: black;
+  filter: blur(10px);
+  z-index: -1;
+}
 /*---------PREREINSCRIPCIO---------*/
 .horario_prereinscripcion {
   position: relative;
