@@ -1,5 +1,5 @@
 <?php
-$servername = "https://db4free.net/phpMyAdmin/index.php?route=/database/structure&db=universidad_proy";
+$servername = "db4free.net:3306/universidad:proy";
 $database = "universidad_proy";
 $username = "gatitolover01";
 $password = "equipoGl01";
