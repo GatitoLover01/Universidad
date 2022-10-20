@@ -1,7 +1,7 @@
 <?php
 include('conexion.php');
-$matricula=$_POST['matricula'];
-$password=$_POST['password'];
+$matricula=$_POST['Matricula_alumno'];
+$password=$_POST['Contrasena'];
 
 $consulta="SELECT*FROM alumnos where alumnos='$matricula' and password='$password'";
 $resultado=mysqli_query($conexion,$consulta);

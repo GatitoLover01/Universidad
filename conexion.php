@@ -1,8 +1,8 @@
 <?php
-$servername = "gatitolover01.freeoda.com";
-$database = "469446";
-$username = "469446";
-$password = "equipoGL01";
+$servername = "db4free.net";
+$database = "universidad_proy";
+$username = "gatitolover01";
+$password = "EquipoGl01";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection
