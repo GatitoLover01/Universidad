@@ -40,6 +40,55 @@ body {
   height: auto;
   text-align: center;
 }
+/*---------INDEX---------*/
+.slider {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite alternate;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img {
+  width: 100%;
+  height: 500px;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
 /*---------ALUMNO---------*/
 .alumno {
   text-align: center;
@@ -114,7 +163,8 @@ body {
   float: center;
   margin-left: 25px;
 }
-.horario_prereinscripcion::after {/*sombreadro*/
+.horario_prereinscripcion::after {
+  /*sombreadro*/
   position: absolute;
   top: 0px;
   left: 0px;
@@ -145,83 +195,82 @@ body {
   z-index: -1;
 }
 /*---------INDEX---------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-:root{
+:root {
   --padding-container: 10px 0;
-  --color--tittle:#000000; 
+  --color--tittle: #000000;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background: rgb(204, 204, 255);
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(204, 204, 255);
 }
 .banner {
-    background: rgb(153, 153, 255);
-    height: 25px;
-  }
-  .header {
-    background: rgb(204, 204, 204);
-    height: 200px;
-    text-align: center;
-  }
+  background: rgb(153, 153, 255);
+  height: 25px;
+}
+.header {
+  background: rgb(204, 204, 204);
+  height: 200px;
+  text-align: center;
+}
 
-  .nav_link{
-    margin: 10;
-    padding: 0;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1em;
-
-  }
-   .nav_items{
-    list-style: none;
-   }
-   .nav_links{
-    color:#000000;
-    text-decoration: none;
-   }
-
-   .about{
-    text-align: center;
-   }
-   .about_paragraph{
-    line-height: 1.5;
-   }
-   .about_main{
-    padding-top: 80px;
-    display: grid;
-    width: 90%;
-    margin: 0 auto;
-    gap: 1em;
-    overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-   }
-   .about_icons{
-    display: grid;
-    gap: 1em;
-    justify-items: center;
-    width: 260px;
-    overflow: hidden;
-    margin: 0 auto;
-   }
-
-*{
-  margin:0;
+.nav_link {
+  margin: 10;
   padding: 0;
-  outline:0;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+.nav_items {
+  list-style: none;
+}
+.nav_links {
+  color: #000000;
+  text-decoration: none;
+}
+
+.about {
+  text-align: center;
+}
+.about_paragraph {
+  line-height: 1.5;
+}
+.about_main {
+  padding-top: 80px;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1em;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+.about_icons {
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+  width: 260px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
   box-sizing: border-box;
 }
-img{
+img {
   width: 100%;
   height: 100%;
 }
-.contenedor{
+.contenedor {
   width: 100%;
   position: relative;
   height: 780;
 }
-.botones{
+.botones {
   font-size: 30px;
   width: 70px;
   height: 70px;
@@ -233,19 +282,19 @@ img{
   position: absolute;
   color: rgb(211, 211, 211);
   box-shadow: 0 0 10px rgb(204, 204, 204);
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.botones:hover{
+.botones:hover {
   cursor: pointer;
-  transform: scale(1.2,1.2);
+  transform: scale(1.2, 1.2);
 }
-.atras{
-  left:2%;
+.atras {
+  left: 2%;
   top: calc(50% - 70%);
 }
-.adelante{
-  left:2%;
+.adelante {
+  left: 2%;
   top: calc(50% - 70%);
 }
