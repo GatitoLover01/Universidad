@@ -10,5 +10,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+/*NOOOOOOOOOOOOOOOOOOOOOOOOOO BORRAR
+if ($result = mysqli_query($conn, "SELECT * FROM profesores")) {
+    echo "Returned rows are: " . mysqli_num_rows($result);
+    // Free result set
+    mysqli_free_result($result);
+  }  */
 mysqli_close($conn);
 ?>
