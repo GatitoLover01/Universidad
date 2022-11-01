@@ -3,7 +3,7 @@
 $usuario = $_POST['matricula'];
 $pass = $_POST['pass'];
 if(empty($usuario) || empty($pass)){
-header("Location: login_alumno.html");
+header("Location: login_aspirante.html");
 exit();
 }
 $servername = "db4free.net";
@@ -14,18 +14,18 @@ $password = "EquipoGl01";
 $conexion = mysqli_connect($servername, $username, $password, $database) or die("Error al conectar " . mysqli_error());
 //mysql_select_db('universidad_proy') or die ("Error al seleccionar la Base de datos: " . mysqli_error());
 //include('conexion.php');
-$result = mysqli_query($conexion, "SELECT * from alumnos where Matricula_alumno='" . $usuario . "'");
+$result = mysqli_query($conexion, "SELECT * from inscripciones where Id_Inscripcion='" . $usuario . "'");
 if($row = mysqli_fetch_array($result)){
 if($row['Contrasena'] == $pass){
 session_start();
-$_SESSION['Matricula_alumno'] = $usuario;
-header("Location: alumno.html");
+$_SESSION['Id_Inscripcion'] = $usuario;
+header("Location: aspirante.html");
 }else{
-header("Location: login_alumno.html");
+header("Location: login_aspirante.html");
 exit();
 }
 }else{
-header("Location: login_alumno.html");
+header("Location: login_aspirante.html");
 exit();
 }
 ?>
