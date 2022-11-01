@@ -4,9 +4,9 @@ $database = "universidad_proy";
 $username = "gatitolover01";
 $password = "EquipoGl01";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conexion = mysqli_connect($servername, $username, $password, $database);
 // Check connection
-if (!$conn) {
+if (!$conexion) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
@@ -16,5 +16,5 @@ if ($result = mysqli_query($conn, "SELECT * FROM profesores")) {
     // Free result set
     mysqli_free_result($result);
   }  */
-mysqli_close($conn);
+mysqli_close($conexion);
 ?>

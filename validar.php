@@ -1,25 +1,26 @@
 <?php
+
+$matricula=$_POST['matricula'];
+$contraseña=$_POST['contraseña'];
+session_start();
+$_SESSION['matricula']=$matricula;
+
 include('conexion.php');
-$matricula=$_POST['Matricula_alumno'];
-$password=$_POST['Contrasena'];
 
-$consulta="SELECT*FROM alumnos where alumnos='$matricula' and password='$password'";
-$resultado=mysqli_query($conexion,$consulta);
+$consulta="SELECT*FROM alumnos where Matricula_alumno='$matricula' and Contrasena='$contraseña' ";
+$resultado=mysql_query($conexion, $consulta);
 
-$filas=mysqli_num_rows($resultado);
+$filas=mysql_num_rows($resultado);
 
 if($filas){
-  
-    header("location:alumno.html");
-
+  header("location : alumno.html");
 }else{
-    ?>
-    <?php
-    include("login_alumno.html");
-
   ?>
-  <h1 class="bad">ERROR DE AUTENTIFICACION</h1>
+  <?php
+  include("login_alumno.html");
+  ?>
+  <h1 class="bad" >ERROR EN LA AUTENTIFICACIÓN</h1>
   <?php
 }
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+mysql_free_result($resultado);
+mysql_close($conexion);
