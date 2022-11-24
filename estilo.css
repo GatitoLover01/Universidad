@@ -143,7 +143,7 @@ body {
 .datos_inscripcion {
   position: relative;
   width: 900px;
-  height: 550px;
+  height: auto;
   background: rgb(240, 240, 240);
   float: center;
   margin-left: 25px;
