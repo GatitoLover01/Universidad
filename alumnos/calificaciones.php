@@ -2,29 +2,29 @@
 
 <head>
   <title>Alumno</title>
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <div class="header">
-      <div class="logo"><img src="Logo.png" width="150px" height="150px"></img></div>
+      <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
         <div id="universidad"><a>Universidad Francisco</a></div>
       </center>
     </div>
     <div class="banner"></div>
     <div class="menu">
-      <a href="calificaciones.html">Calificaciones</a>
-      <a href="prereinscripcion.html">Pre-reinscripción</a>
-      <a href="index.html">Regresar</a>
+      <a href="../alumnos/alumno.php">Inicio</a>
+      <a href="../alumnos/prereinscripcion.php">Pre-reinscripción</a>
+      <a href="../index.html">Regresar</a>
 
     </div>
   </header>
 
   <div class="alumno">
-    <h1>Bienvenido Alumno</h1>
+    <h1>Calificaciones</h1>
     </br></br>
     <center>
       <div class="horario_alumno">
@@ -34,17 +34,10 @@
             <th>Asignatura</th>
             <th>Créditos</th>
             <th>Grupo</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
+            <th>Calificación</th>
+
           </tr>
           <tr>
-            <th>materia 1</th>
-            <th>materia 2</th>
-            <th>materia 3</th>
-            <th></th>
             <th></th>
             <th></th>
             <th></th>
@@ -57,16 +50,8 @@
             <th></th>
             <th></th>
             <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
           </tr>
           <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
             <th></th>
             <th></th>
             <th></th>

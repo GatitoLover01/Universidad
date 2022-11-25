@@ -2,23 +2,23 @@
 
 <head>
   <title>Pre-reinscripcion</title>
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <div class="header">
-      <div class="logo"><img src="Logo.png" width="150px" height="150px"></img></div>
+      <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
         <div id="universidad"><a>Universidad Francisco</a></div>
       </center>
     </div>
     <div class="banner"></div>
     <div class="menu">
-      <a href="calificaciones.html">Calificaciones</a>
-      <a href="alumno.html">Alumnos</a>
-      <a href="index.html">Regresar</a>
+      <a href="alumnos/calificaciones.php">Calificaciones</a>
+      <a href="alumnos/alumno.php">Alumnos</a>
+      <a href="../index.html">Regresar</a>
     </div>
   </header>
 

@@ -3,7 +3,7 @@
 $usuario = $_POST['matricula'];
 $pass = $_POST['pass'];
 if(empty($usuario) || empty($pass)){
-header("Location: login_alumno.html");
+header("Location:../alumnos/login_alumno.php");
 exit();
 }
 $servername = "remotemysql.com";
@@ -18,13 +18,13 @@ if($row = mysqli_fetch_array($result)){
 if($row['Contrasena'] == $pass){
 session_start();
 $_SESSION['Matricula_alumno'] = $usuario;
-header("Location: alumno.html");
+header("Location:../alumnos/alumno.php");
 }else{
-header("Location: login_alumno.html");
+header("Location:../alumnos/login_alumno.php");
 exit();
 }
 }else{
-header("Location: login_alumno.html");
+header("Location:../alumnos/login_alumno.php");
 exit();
 }
 ?>

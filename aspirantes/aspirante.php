@@ -1,23 +1,34 @@
+<?php
+$servername = "remotemysql.com";
+$database = "FgQKdPudUJ";
+$username = "FgQKdPudUJ";
+$password = "ew5EoQKp3s";
+// Create connection
+$conexion = mysqli_connect($servername, $username, $password, $database);
+
+$sqlCarreras= "SELECT Nombre FROM carreras";
+$dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
+?>
 <html>
 
 <head>
   <title>Aspirante</title>
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <div class="header">
-      <div class="logo"><img src="Logo.png" width="150px" height="150px"></img></div>
+      <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
         <div id="universidad"><a>Universidad Francisco</a></div>
       </center>
     </div>
     <div class="banner"></div>
     <div class="menu">
-      <a href="login_aspirante.html">Iniciar sesión</a>
-      <a href="index.html">Regresar</a>
+      <a href="login_aspirante.php">Iniciar sesión</a>
+      <a href="../index.html">Regresar</a>
     </div>
   </header>
 
@@ -67,6 +78,17 @@
             <tr style="height:50px">
               <th align=left>Carrera:</th>
               <th align=left><input type="text" name="Carrera" id="Carrera"></th>
+              <th align=left>
+            <select name="nombre" class="form-control form-control-sm">
+                    <option value="">Seleccione la carrera</option>
+                    <?php
+                      while ($dataSelect = mysqli_fetch_array($dataCarrerasSelect)) { ?>
+                        <option>
+                          <?php echo utf8_encode($dataSelect["Nombre"]); ?>
+                        </option>
+                    <?php } ?>
+                  </select>
+              </th>
             </tr>
             <tr style="height:50px">
               <th align=left>Año de solicitud</th>
@@ -85,13 +107,6 @@
 
   </center>
   </br></br>
-
-
-  <form action="guardar_docs.php" method="POST" enctype="multipart/form-data">
-    <input type="text" placeholder="ImagenX..." name="Nombre" value="" /><br>
-    <input type="file" name="certificado" id="certificado"><br>
-    <input type="submit" value="Aceptar">
-  </form>
 
   <footer class="contenedor-footer">
     <div class="content-foo">

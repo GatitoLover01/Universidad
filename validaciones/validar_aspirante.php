@@ -3,7 +3,7 @@
 $usuario = $_POST['matricula'];
 $pass = $_POST['pass'];
 if(empty($usuario) || empty($pass)){
-header("Location: login_aspirante.html");
+header("Location: ../aspirantes/login_aspirante.php");
 exit();
 }
 $servername = "db4free.net";
@@ -19,13 +19,13 @@ if($row = mysqli_fetch_array($result)){
 if($row['Contrasena'] == $pass){
 session_start();
 $_SESSION['Id_Inscripcion'] = $usuario;
-header("Location: aspirante.html");
+header("Location: ../aspirantes/aspirante.html");
 }else{
-header("Location: login_aspirante.html");
+header("Location: ../aspirantes/login_aspirante.html");
 exit();
 }
 }else{
-header("Location: login_aspirante.html");
+header("Location: ../aspirantes/login_aspirante.html");
 exit();
 }
 ?>
