@@ -6,7 +6,7 @@ $password = "ew5EoQKp3s";
 // Create connection
 $conexion = mysqli_connect($servername, $username, $password, $database);
 
-$sqlCarreras= "SELECT Nombre FROM carreras";
+$sqlCarreras= "SELECT Id_Carrera, Nombre FROM carreras";
 $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
 ?>
 <html>
@@ -77,16 +77,23 @@ $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
             </tr>
             <tr style="height:50px">
               <th align=left>Carrera:</th>
-              <th align=left><input type="text" name="Carrera" id="Carrera"></th>
+              <th align=left><input type="text" name="Carrera" id="Carrera" placeholder="Ingrese el id de la carrera"></th>
               <th align=left>
             <select name="nombre" class="form-control form-control-sm">
                     <option value="">Seleccione la carrera</option>
                     <?php
                       while ($dataSelect = mysqli_fetch_array($dataCarrerasSelect)) { ?>
                         <option>
-                          <?php echo utf8_encode($dataSelect["Nombre"]); ?>
+                          <?php 
+                          echo utf8_encode($dataSelect["Id_Carrera"]);
+                          echo utf8_encode(".-");
+                          echo utf8_encode($dataSelect["Nombre"]); 
+                          
+                          ?>
                         </option>
-                    <?php } ?>
+                    <?php 
+
+                  } ?>
                   </select>
               </th>
             </tr>
