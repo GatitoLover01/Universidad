@@ -30,7 +30,7 @@
     <center>
       <div class="horario_alumno">
       <div class="container-table">
-            <div class="table__title">Horario</div>
+            <div class="table__title">Horario Alumno</div>
             <div class="table__header">Asignatura</div>
             <div class="table__header">Creditos</div>
             <div class="table__header">Grupo</div>
