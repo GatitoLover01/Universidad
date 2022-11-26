@@ -1,3 +1,19 @@
+<?php
+$servername = "remotemysql.com";
+$database = "FgQKdPudUJ";
+$username = "FgQKdPudUJ";
+$password = "ew5EoQKp3s";
+// Create connection
+$conexion = mysqli_connect($servername, $username, $password, $database);
+session_start();
+$usuario= $_SESSION['Matricula_alumno'];
+//consulta para la tabla horario
+$sqlHorario= "SELECT Nombre, Creditos, Grupos_Id_Grupo, Dia, Hora FROM horario_alumno, asignaturas, grupos WHERE Asignaturas_Id_Asignatura=Id_Asignatura AND Grupos_Id_Grupo= Id_Grupo AND Alumnos_Matricula_alumno = '".$usuario."'";
+//consulta para mostrar los datos
+$sqlDatosAlumno= "SELECT Matricula_alumno, concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno), Semestre, carreras.Nombre, Avance_curricular FROM alumnos, carreras WHERE carreras.Id_Carrera= alumnos.Carreras_Id_Carrera AND alumnos.Matricula_alumno='".$usuario."'";
+
+?>
+
 <html>
 
 <head>
@@ -12,7 +28,7 @@
     <div class="header">
       <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
-        <div id="universidad"><a>Universidad del Monte Bravo</a></div>
+        <div id="universidad"><a>Universidad del Monte</a></div>
       </center>
     </div>
     <div class="banner"></div>
@@ -39,28 +55,54 @@
             <div class="table__header">Miercoles</div>
             <div class="table__header">Jueves</div>
             <div class="table__header">Viernes</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
-            <div class="table__item">ITEM iren</div>
+            <?php $resultadoHorario = mysqli_query($conexion, $sqlHorario); 
+          
+            while($row=mysqli_fetch_assoc($resultadoHorario)) { ?>
+              <div class="table__item"><?php echo $row["Nombre"];?></div>
+              <div class="table__item"><?php echo $row["Creditos"];?></div>
+              <div class="table__item"><?php echo $row["Grupos_Id_Grupo"];?></div>
+              <?php 
+                $aux=$row["Dia"];
+                if($aux == 'Lunes') {?>
+
+                <div class="table__item"><?php echo $row["Hora"];?></div>
+                <div class="table__item"></div>
+                <div class="table__item"><?php echo $row["Hora"];?></div>
+                <div class="table__item"></div>
+                <div class="table__item"><?php echo $row["Hora"];?></div>
+              <?php } else { ?>
+                <div class="table__item"></div>
+                <div class="table__item"><?php echo $row["Hora"];?></div>
+                <div class="table__item"></div>
+                <div class="table__item"><?php echo $row["Hora"];?></div>
+                <div class="table__item"></div>
+              <?php }?>
+              
+            <?php } mysqli_free_result($resultadoHorario);?>
         </div>
       </div>
     </center>
   </div>
-  <div class="datos_alumno">hola estoy probando esto :3</div>
-  </br>
+  <div class="datos_alumno">
+  <center>
+      <h2>Datos Alumno</h2></br>
+    </center>
+    <?php $resultadoDatos = mysqli_query($conexion, $sqlDatosAlumno); 
+          
+    while($row=mysqli_fetch_assoc($resultadoDatos)) { ?>
+      <h4>Matrícula: </h4></p>
+      <h4><?php echo $row["Matricula_alumno"];?></h4><br>
+      <h4>Nombre: </h4></p>
+      <h4><?php echo $row["concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno)"];?></h4><br>
+      <h4>Semestre: </h4></p>
+      <h4><?php echo $row["Semestre"];?></h4><br>
+      <h4>Carrera: </h4></p>
+      <h4><?php echo $row["Nombre"];?></h4><br>
+      <h4>Avance curricular: </h4></p>
+      <h4><?php echo $row["Avance_curricular"];?></h4><br>
+    <?php } mysqli_free_result($resultadoDatos);?>
+  </div>
+  </br></br>
   <style>
     table,
     th,
