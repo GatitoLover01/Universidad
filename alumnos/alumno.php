@@ -3,6 +3,7 @@
 <head>
   <title>Alumno</title>
   <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/estilo_tabla.css">
   <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
 </head>
 
@@ -28,52 +29,33 @@
     </br></br>
     <center>
       <div class="horario_alumno">
-        <table>
-          <tr>
-            <th>Materia</th>
-            <th>Asignatura</th>
-            <th>Créditos</th>
-            <th>Grupo</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-          </tr>
-          <tr>
-            <th>materia 1</th>
-            <th>materia 2</th>
-            <th>materia 3</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </table>
+      <div class="container-table">
+            <div class="table__title">Horario</div>
+            <div class="table__header">Asignatura</div>
+            <div class="table__header">Creditos</div>
+            <div class="table__header">Grupo</div>
+            <div class="table__header">Lunes</div>
+            <div class="table__header">Martes</div>
+            <div class="table__header">Miercoles</div>
+            <div class="table__header">Jueves</div>
+            <div class="table__header">Viernes</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+            <div class="table__item">ITEM iren</div>
+        </div>
       </div>
     </center>
   </div>
