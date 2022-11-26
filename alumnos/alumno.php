@@ -77,7 +77,7 @@
       </div>
     </center>
   </div>
-  <div class="datos_alumno">hola aqui van a ir los datos del alumno :3</div>
+  <div class="datos_alumno">hola estoy probando esto :3</div>
   </br>
   <style>
     table,
