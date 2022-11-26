@@ -12,7 +12,7 @@
     <div class="header">
       <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
-        <div id="universidad"><a>Universidad Francisco</a></div>
+        <div id="universidad"><a>Universidad del Monte Bravo</a></div>
       </center>
     </div>
     <div class="banner"></div>

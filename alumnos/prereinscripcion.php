@@ -11,7 +11,7 @@
     <div class="header">
       <div class="logo"><img src="../img/Logo.png" width="150px" height="150px"></img></div>
       <center>
-        <div id="universidad"><a>Universidad Francisco</a></div>
+        <div id="universidad"><a>Universidad del Monte Bravo</a></div>
       </center>
     </div>
     <div class="banner"></div>
@@ -165,6 +165,130 @@
         <br>
         <a href="#">Aceptar y terminar</a>
         <br>
+      </div>
+    </center>
+    <center>
+      <div class="horario_prereinscripcion">
+        <table>
+          <tr>
+            <th> </th>
+            <th width="180">
+              <p><br>Lunes</p>
+            </th>
+            <th width="180">
+              <p><br>Martes</p>
+            </th>
+            <th width="180">
+              <p><br>Miercoles</p>
+            </th>
+            <th width="180">
+              <p><br>Jueves</p>
+            </th>
+            <th width="180">
+              <p><br>Viernes</p>
+            </th>
+          </tr>
+          <tr>
+            <th width="150">
+              <p>ASGINATURA <br>08:00 - 10:00</p>
+            </th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+          </tr>
+          <tr>
+            <th width="150">
+              <p>ASGINATURA <br>10:00 - 12:00</p>
+            </th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+          </tr>
+          <tr>
+            <th width="150">
+              <p>ASGINATURA <br>12:00 - 14:00</p>
+            </th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+          </tr>
+          <tr>
+            <th width="150">
+              <p>ASGINATURA <br>14:00 - 16:00</p>
+            </th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+          </tr>
+          <tr>
+            <th width="150">
+              <p>ASGINATURA <br>16:00 - 18:00</p>
+            </th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+            <th><select name="Asignatura" id="AsgiLun">
+                <option value="r">Escoge una asignatura</option>
+              </select></th>
+          </tr>
+        </table>
       </div>
     </center>
   </div>
