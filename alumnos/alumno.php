@@ -86,7 +86,6 @@ $sqlDatosAlumno = "SELECT Matricula_alumno, concat(alumnos.Nombre,' ', Apellido_
   </div>
 
   <div class="datos_alumno">
-
     <center>
       <h2>Datos Alumno</h2></br>
     </center>
