@@ -136,6 +136,10 @@ body {
   filter: blur(10px);
   z-index: -1;
 }
+
+.tabulacion{
+  margin-left: 10px;
+}
 /*---------ASPIRANTE---------*/
 .inscripcion {
   text-align: center;
