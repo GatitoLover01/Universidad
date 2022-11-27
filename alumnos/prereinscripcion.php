@@ -3,6 +3,7 @@
 <head>
   <title>Pre-reinscripcion</title>
   <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/estilo_tabla.css">
   <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
 </head>
 
@@ -26,149 +27,10 @@
     <h1>Pre Reinscripcion</h1>
     <center>
       <div class="horario_prereinscripcion">
-        <br>
-        <table bgcolor="black">
-          <tr bgcolor="#9999ff">
-            <th width="100">DIA</th>
-            <th width="180">
-              <p>ASGINATURA <br>08:00 - 10:00</p>
-            </th>
-            <th width="180">
-              <p>ASGINATURA <br>10:00 - 12:00</p>
-            </th>
-            <th width="180">
-              <p>ASGINATURA <br>12:00 - 14:00</p>
-            </th>
-            <th width="180">
-              <p>ASGINATURA <br>14:00 - 16:00</p>
-            </th>
-            <th width="180">
-              <p>ASGINATURA <br>16:00 - 18:00</p>
-            </th>
-          </tr>
-          <tr <tr bgcolor="#f0f0f0">
-            <th>
-              <br>
-              <p>Lunes</p>
-              <br>
-            </th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-          </tr>
-          <tr <tr bgcolor="#f0f0f0">
-            <th>
-              <br>
-              <p>Martes</p>
-              <br>
-            </th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-          </tr>
-          <tr <tr bgcolor="#f0f0f0">
-            <th>
-              <br>
-              <p>Miercoles</p>
-              <br>
-            </th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-          </tr>
-          <tr <tr bgcolor="#f0f0f0">
-            <th>
-              <br>
-              <p>Jueves</p>
-              <br>
-            </th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-          </tr>
-          <tr <tr bgcolor="#f0f0f0">
-            <th>
-              <br>
-              <p>Viernes</p>
-              <br>
-            </th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-            <th><select name="Asignatura" id="AsgiLun">
-                <option value="r">Escoge una asignatura</option>
-              </select></th>
-          </tr>
-          <p>
-            Las asignaturas seleccionadas para el dias Lunes, Miercoles y Viernes, serán los mismos. De igual forma
-            sucede con los dias Martes y Jueves.
-          </p><br>
-        </table>
-        <br>
-        <br>
-        <a href="#">Aceptar y terminar</a>
-        <br>
-      </div>
-    </center>
-    <center>
-      <div class="horario_prereinscripcion">
+        <br><p>
+          Las asignaturas seleccionadas para el dias Lunes, Miercoles y Viernes, serán los mismos. De igual forma
+          sucede con los dias Martes y Jueves.
+        </p><br>
         <table>
           <tr>
             <th> </th>
@@ -288,6 +150,9 @@
                 <option value="r">Escoge una asignatura</option>
               </select></th>
           </tr>
+        <br>
+        <a href="#">Aceptar y terminar</a>
+        <br>
         </table>
       </div>
     </center>
