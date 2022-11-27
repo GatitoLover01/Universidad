@@ -36,7 +36,6 @@ $sqlDatosAlumno= "SELECT Matricula_alumno, concat(alumnos.Nombre,' ', Apellido_p
       <a href="calificaciones.php">Calificaciones</a>
       <a href="prereinscripcion.php">Pre-reinscripción</a>
       <a href="../index.html">Regresar</a>
-
     </div>
   </header>
 
