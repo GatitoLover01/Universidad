@@ -29,7 +29,6 @@ $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
     </div>
     <div class="banner"></div>
     <div class="menu">
-      <a href="login_aspirante.php">Iniciar sesión</a>
       <a href="../index.html">Regresar</a>
     </div>
   </header>
