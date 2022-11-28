@@ -35,7 +35,7 @@
       </div>
       </br>
       <center>
-        <a type="submit" value="Cancelar" class="button" href="index.html">Cancelar</a>
+        <a type="submit" value="Cancelar" class="button" href="../index.html">Cancelar</a>
         <input type="submit" value="Ingresar" class="button">
       </center>
     </div>

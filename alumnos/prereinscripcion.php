@@ -30,13 +30,13 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
         <img alt="logo" src="../img/Logo.png" width="150px" height="150px"></img>
       </div>
       <center>
-        <div id="universidad"><a>Universidad del Monte Bravo</a></div>
+        <div id="universidad"><a>Universidad del Monte</a></div>
       </center>
     </div>
     <div class="banner"></div>
     <div class="menu">
-      <a href="alumnos/calificaciones.php">Calificaciones</a>
-      <a href="alumnos/alumno.php">Alumnos</a>
+      <a href="../alumnos/calificaciones.php">Calificaciones</a>
+      <a href="../alumnos/alumno.php">Alumnos</a>
       <a href="../index.html">Regresar</a>
     </div>
   </header>
