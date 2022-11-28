@@ -25,13 +25,13 @@
 
       <div class="input-contenedor">
         <i class="fas fa-envelope icon"></i>
-        <input type="text" placeholder="Matricula">
+        <input type="text" placeholder="Matricula" name="matricula">
 
       </div>
 
       <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-        <input type="password" placeholder="Contraseña">
+        <input type="password" placeholder="Contraseña" name="pass">
 
       </div>
       </br>

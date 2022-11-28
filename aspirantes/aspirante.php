@@ -1,10 +1,12 @@
 <?php
+require('../conexion/conexion.php');
+/*
 $servername = "remotemysql.com";
 $database = "FgQKdPudUJ";
 $username = "FgQKdPudUJ";
 $password = "ew5EoQKp3s";
 // Create connection
-$conexion = mysqli_connect($servername, $username, $password, $database);
+$conexion = mysqli_connect($servername, $username, $password, $database);*/
 
 $sqlCarreras= "SELECT Id_Carrera, Nombre FROM carreras";
 $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
