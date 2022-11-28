@@ -4,8 +4,7 @@ session_start();
 $usuario = $_SESSION['Matricula_alumno'];
 
 //consulta para la tabla calificaciones
-$sqlTablaCalificaciones ="SELECT asignaturas.Nombre, Creditos, Parcial_1, Parcial_2, Parcial_3, Ordinario, Extraordinario, Matricula_profesor FROM calificaciones, alumnos, asignaturas, profesores WHERE asignaturas.Id_Asignatura= calificaciones.Asignaturas_Id_Asignatura AND profesores.Matricula_profesor=calificaciones.Profesores_Matricula_Profesor AND calificaciones.Alumnos_Matricula_alumno= '" . $usuario . "'";
-
+$sqlTablaCalificaciones ="SELECT asignaturas.Nombre, Creditos, Parcial_1, Parcial_2, Parcial_3, Ordinario, Extraordinario, Matricula_profesor FROM calificaciones, alumnos, asignaturas, profesores WHERE asignaturas.Id_Asignatura= calificaciones.Asignaturas_Id_Asignatura AND profesores.Matricula_profesor=calificaciones.Profesores_Matricula_Profesor AND alumnos.Matricula_alumno=calificaciones.Alumnos_Matricula_alumno AND calificaciones.Alumnos_Matricula_alumno='" . $usuario . "'";
 //consulta para mostrar los datos
 $sqlDatosAlumno = "SELECT Matricula_alumno, concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno), Semestre, carreras.Nombre, Avance_curricular FROM alumnos, carreras WHERE carreras.Id_Carrera= alumnos.Carreras_Id_Carrera AND alumnos.Matricula_alumno='" . $usuario . "'";
 
