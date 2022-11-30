@@ -12,15 +12,15 @@
 </head>
 
 <body>
-  <form action="../validaciones/validar.php" method="post" class="formulario">
+  <div class="primero">
+    <div class="segundo">
+      <form action="../validaciones/validar.php" method="post" class="formulario">
     <div class="barra"></div>
     <div class="logo">
       <center><img src="../img/Logo.png" width="150px;" height="150px"></img></center>
     </div>
     <h1>Inicio de sesión</h1>
     <div class="contenedor">
-
-
 
       <div class="input-contenedor">
         <i class="fas fa-envelope icon"></i>
@@ -41,5 +41,7 @@
     </div>
     <div class="barra"></div>
   </form>
+    </div>
+  </div>
 </body>
 </html>
