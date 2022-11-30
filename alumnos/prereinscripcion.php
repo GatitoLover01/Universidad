@@ -284,7 +284,50 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
       function EnviarDatos() {
         var res = window.confirm("¿Está seguro de enviar este pre-horario?");
         if (res == true) {
-          alert("Se envia");
+          for (var i = 1; i < 6; i++) {
+            var idLu = "Lu";
+            idLu += i;
+            var idMa = "Ma";
+            idMa += i;
+
+            var dato1 = document.getElementById(idLu).selectedIndex = index;
+            var dato2 = document.getElementById(idMa).selectedIndex = index;
+
+            switch (i) {
+              case 1:
+                $sqlIngresarPreH = 
+                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
+                ($usuario, dato1, "Lunes", "08:00 - 10:00");
+
+                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
+                
+                $sqlIngresarPreH = 
+                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
+                ($usuario, dato2, "Martes", "08:00 - 10:00");
+
+                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
+                break;
+              case 2:
+                $sqlIngresarPreH = 
+                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
+                ($usuario, dato1, "Lunes", "10:00 - 12:00");
+
+                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
+                
+                $sqlIngresarPreH = 
+                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
+                ($usuario, dato2, "Martes", "10:00 - 12:00");
+
+                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
+                break;
+              case 3:
+                break;
+              case 4:
+                break;
+              case 5:
+                break;
+            }
+          }
         } else {
           //alert("No pasa nada");
         }
@@ -309,7 +352,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
             document.getElementById(idMi).selectedIndex = index;
             document.getElementById(idVi).selectedIndex = index;
 
-            
+
             if (RevisarFilas(idO, index) == false && RevisarColumnas(idO, index) == false) {
               MostrarAviso();
             }
@@ -340,8 +383,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
           }
         }
       }
-
-
+      
       function RevisarFilas(idO, index) {
         if (index != 0) {
           for (var i = 1; i < 6; i++) {
