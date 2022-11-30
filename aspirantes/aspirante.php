@@ -76,13 +76,12 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
             </tr>
             <tr style="height:50px">
               <th align=left>Carrera:</th>
-              <th align=left><input type="text" name="Carrera" id="Carrera" placeholder="Ingrese el id de la carrera"></th>
               <th align=left>
-            <select name="selectCarrera" class="form-control form-control-sm">
+            <select id="idCarrera" name="selectCarrera" class="form-control form-control-sm" onchange="mostrarId();">
                     <option value="">Seleccione la carrera</option>
                     <?php
                       while ($dataSelect = mysqli_fetch_array($dataCarrerasSelect)) { ?>
-                        <option>
+                        <option value=<?php echo  utf8_encode($dataSelect['Id_Carrera']) ?>>
                           <?php 
                           echo utf8_encode($dataSelect["Id_Carrera"]);
                           echo utf8_encode(".-");
@@ -95,6 +94,8 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
                   } ?>
                   </select>
               </th>
+              <th align=left><input type="text" name="Carrera" id="Carrera" ></th>
+              
             </tr>
             <tr style="height:50px">
               <th align=left>Año de solicitud</th>
@@ -102,7 +103,6 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
             </tr>
             <tr style="height:50px">
               <th align=left>Genero:</th>
-              <th align=left><input type="text" name="genero" id="genero"></th>
               <th align=left>
                 <select name="selectGenero" class="form-control form-control-sm">
                     <option value="">Seleccione el género</option>
@@ -119,6 +119,8 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
                     <?php 
 
                   } ?>
+              <th align=left><input type="text" name="genero" id="genero"></th>
+              
                   </select>
               </th>
             </tr>
@@ -131,6 +133,15 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
 
   </center>
   </br></br>
+
+  <script type="text/javascript">
+  function mostrarId() {
+    var combo = document.getElementById("idCarrera");
+    var index = combo.options[combo.selectedIndex].index;
+
+    document.getElementById("Carrera").selectedIndex = index;
+  }
+  </script>
 
   <footer class="contenedor-footer">
     <div class="content-foo">
