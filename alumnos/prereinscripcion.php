@@ -274,65 +274,15 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
           mysqli_free_result($resultadoAsignaturas); ?>
         </div>
         <br>
+
         <button id="BtnAceptar" onclick="EnviarDatos();">Aceptar y enviar.</button>
+
         <br><br>
       </div>
     </center>
     <br>
 
     <script type="text/javascript">
-      function EnviarDatos() {
-        var res = window.confirm("¿Está seguro de enviar este pre-horario?");
-        if (res == true) {
-          for (var i = 1; i < 6; i++) {
-            var idLu = "Lu";
-            idLu += i;
-            var idMa = "Ma";
-            idMa += i;
-
-            var dato1 = document.getElementById(idLu).selectedIndex = index;
-            var dato2 = document.getElementById(idMa).selectedIndex = index;
-
-            switch (i) {
-              case 1:
-                $sqlIngresarPreH = 
-                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
-                ($usuario, dato1, "Lunes", "08:00 - 10:00");
-
-                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
-                
-                $sqlIngresarPreH = 
-                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
-                ($usuario, dato2, "Martes", "08:00 - 10:00");
-
-                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
-                break;
-              case 2:
-                $sqlIngresarPreH = 
-                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
-                ($usuario, dato1, "Lunes", "10:00 - 12:00");
-
-                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
-                
-                $sqlIngresarPreH = 
-                "INSERT INTO `pre_horarios`(`Alumnos_Matricula_alumno`, `Grupos_Id_Grupo`, `dia`, `hora`) VALUES "
-                ($usuario, dato2, "Martes", "10:00 - 12:00");
-
-                <?php mysqli_query($conexion, $sqlIngresarPreH);?>
-                break;
-              case 3:
-                break;
-              case 4:
-                break;
-              case 5:
-                break;
-            }
-          }
-        } else {
-          //alert("No pasa nada");
-        }
-      }
-
       function MostrarSeleccionado(idO) {
         for (var i = 1; i < 6; i++) {
           var idLu = "Lu";
@@ -383,7 +333,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
           }
         }
       }
-      
+
       function RevisarFilas(idO, index) {
         if (index != 0) {
           for (var i = 1; i < 6; i++) {
@@ -403,7 +353,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
                 document.getElementById(idLu).selectedIndex = 0;
                 document.getElementById(idMi).selectedIndex = 0;
                 document.getElementById(idVi).selectedIndex = 0;
-                alert("FILA Favor de seleccionar una materia no registrada antes en su pre horario.");
+                alert("Favor de seleccionar una materia no registrada antes en su pre horario.");
                 return true;
               }
             } else {
@@ -411,7 +361,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
                 if (index == document.getElementById(idLu).selectedIndex || index == document.getElementById(idMi).selectedIndex || index == document.getElementById(idVi).selectedIndex) {
                   document.getElementById(idMa).selectedIndex = 0;
                   document.getElementById(idJu).selectedIndex = 0;
-                  alert("FILA Favor de seleccionar una materia no registrada antes en su pre horario.");
+                  alert("Favor de seleccionar una materia no registrada antes en su pre horario.");
                   return true;
                 }
               }
@@ -452,7 +402,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
                     document.getElementById(idMiO).selectedIndex = 0;
                     document.getElementById(idViO).selectedIndex = 0;
 
-                    alert("COLUMN Favor de seleccionar una materia no registrada antes en su pre horario.");
+                    alert("Favor de seleccionar una materia no registrada antes en su pre horario.");
                     break;
                   }
                 }
@@ -474,7 +424,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
                       document.getElementById(idMaO).selectedIndex = 0;
                       document.getElementById(idJuO).selectedIndex = 0;
 
-                      alert("JCOLUMN Favor de seleccionar una materia no registrada antes en su pre horario.");
+                      alert("Favor de seleccionar una materia no registrada antes en su pre horario.");
                       break;
                     }
                   }
@@ -490,7 +440,7 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
                         document.getElementById(idMaO).selectedIndex = 0;
                         document.getElementById(idJuO).selectedIndex = 0;
 
-                        alert("MACOLUMN Favor de seleccionar una materia no registrada antes en su pre horario.");
+                        alert("Favor de seleccionar una materia no registrada antes en su pre horario.");
                         break;
                       }
                     }
@@ -501,7 +451,14 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
           }
         }
       }
+
+      function EnviarDatos() {
+        var res = window.confirm("¿Está seguro de enviar este pre-horario?");
+        if (res == true) {
+        }
+      }
     </script>
+
   </div>
 
   <style>
