@@ -99,10 +99,13 @@ body {
 .alumno {
   text-align: center;
 }
+.alumno_contenedor{
+  height: 70%;
+}
 .horario_alumno {
   position: relative;
   width: 900px;
-  height: auto;
+  height: 400px;
   background: rgb(240, 240, 240);
   float: left;
   margin-left: 25px;

@@ -38,79 +38,79 @@ $sqlDatosAlumno = "SELECT Matricula_alumno, concat(alumnos.Nombre,' ', Apellido_
       <a href="../index.html">Regresar</a>
     </div>
   </header>
-
-  <div class="alumno">
+  <center>
     <h1>Bienvenido Alumno</h1>
     </br></br>
-    <center>
-      <div class="horario_alumno">
-        <div class="container-table">
-          <div class="table__title">Horario Alumno</div>
-          <div class="table__header">Asignatura</div>
-          <div class="table__header">Creditos</div>
-          <div class="table__header">Grupo</div>
-          <div class="table__header">Lunes</div>
-          <div class="table__header">Martes</div>
-          <div class="table__header">Miercoles</div>
-          <div class="table__header">Jueves</div>
-          <div class="table__header">Viernes</div>
-          <?php $resultadoHorario = mysqli_query($conexion, $sqlHorario);
+  </center>
+  <section class="alumno_contenedor">
+    <div class="horario_alumno">
+      <div class="container-table">
+        <div class="table__title">Horario Alumno</div>
+        <div class="table__header">Asignatura</div>
+        <div class="table__header">Creditos</div>
+        <div class="table__header">Grupo</div>
+        <div class="table__header">Lunes</div>
+        <div class="table__header">Martes</div>
+        <div class="table__header">Miercoles</div>
+        <div class="table__header">Jueves</div>
+        <div class="table__header">Viernes</div>
+        <?php $resultadoHorario = mysqli_query($conexion, $sqlHorario);
 
-          while ($row = mysqli_fetch_assoc($resultadoHorario)) { ?>
-            <div class="table__item"><?php echo $row["Nombre"]; ?></div>
-            <div class="table__item"><?php echo $row["Creditos"]; ?></div>
-            <div class="table__item"><?php echo $row["Grupos_Id_Grupo"]; ?></div>
-            <?php
-            $aux = $row["Dia"];
-            if ($aux == 'Lunes') { ?>
+        while ($row = mysqli_fetch_assoc($resultadoHorario)) { ?>
+          <div class="table__item"><?php echo $row["Nombre"]; ?></div>
+          <div class="table__item"><?php echo $row["Creditos"]; ?></div>
+          <div class="table__item"><?php echo $row["Grupos_Id_Grupo"]; ?></div>
+          <?php
+          $aux = $row["Dia"];
+          if ($aux == 'Lunes') { ?>
 
-              <div class="table__item"><?php echo $row["Hora"]; ?></div>
-              <div class="table__item"></div>
-              <div class="table__item"><?php echo $row["Hora"]; ?></div>
-              <div class="table__item"></div>
-              <div class="table__item"><?php echo $row["Hora"]; ?></div>
-            <?php } else { ?>
-              <div class="table__item"></div>
-              <div class="table__item"><?php echo $row["Hora"]; ?></div>
-              <div class="table__item"></div>
-              <div class="table__item"><?php echo $row["Hora"]; ?></div>
-              <div class="table__item"></div>
-            <?php } ?>
+            <div class="table__item"><?php echo $row["Hora"]; ?></div>
+            <div class="table__item"></div>
+            <div class="table__item"><?php echo $row["Hora"]; ?></div>
+            <div class="table__item"></div>
+            <div class="table__item"><?php echo $row["Hora"]; ?></div>
+          <?php } else { ?>
+            <div class="table__item"></div>
+            <div class="table__item"><?php echo $row["Hora"]; ?></div>
+            <div class="table__item"></div>
+            <div class="table__item"><?php echo $row["Hora"]; ?></div>
+            <div class="table__item"></div>
+          <?php } ?>
 
-          <?php }
-          mysqli_free_result($resultadoHorario); ?>
-        </div>
+        <?php }
+        mysqli_free_result($resultadoHorario); ?>
       </div>
-    </center>
-  </div>
+    </div>
+    <div class="datos_alumno">
+      <center>
+        <h2>Datos Alumno</h2></br>
+      </center>
+      <?php $resultadoDatos = mysqli_query($conexion, $sqlDatosAlumno);
 
-  <div class="datos_alumno">
-    <center>
-      <h2>Datos Alumno</h2></br>
-    </center>
-    <?php $resultadoDatos = mysqli_query($conexion, $sqlDatosAlumno);
+      while ($row = mysqli_fetch_assoc($resultadoDatos)) { ?>
+        <h4 class="tabulacion">Matrícula: </h4>
+        </p>
+        <h4 class="tabulacion"><?php echo $row["Matricula_alumno"]; ?></h4><br>
+        <h4 class="tabulacion">Nombre: </h4>
+        </p>
+        <h4 class="tabulacion"><?php echo $row["concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno)"]; ?></h4><br>
+        <h4 class="tabulacion">Semestre: </h4>
+        </p>
+        <h4 class="tabulacion"><?php echo $row["Semestre"]; ?></h4><br>
+        <h4 class="tabulacion">Carrera: </h4>
+        </p>
+        <h4 class="tabulacion"><?php echo $row["Nombre"]; ?></h4><br>
+        <h4 class="tabulacion">Avance curricular: </h4>
+        </p>
+        <h4 class="tabulacion"><?php echo $row["Avance_curricular"]; ?></h4><br>
+      <?php }
+      mysqli_free_result($resultadoDatos); ?>
 
-    while ($row = mysqli_fetch_assoc($resultadoDatos)) { ?>
-      <h4 class="tabulacion">Matrícula: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Matricula_alumno"]; ?></h4><br>
-      <h4 class="tabulacion">Nombre: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno)"]; ?></h4><br>
-      <h4 class="tabulacion">Semestre: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Semestre"]; ?></h4><br>
-      <h4 class="tabulacion">Carrera: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Nombre"]; ?></h4><br>
-      <h4 class="tabulacion">Avance curricular: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Avance_curricular"]; ?></h4><br>
-    <?php }
-    mysqli_free_result($resultadoDatos); ?>
+    </div>
+    <br>
+  </section>
 
-  </div>
-  
+
   <style>
     table,
     th,
