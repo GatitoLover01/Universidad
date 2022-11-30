@@ -273,10 +273,20 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
           <?php }
           mysqli_free_result($resultadoAsignaturas); ?>
         </div>
+
+        <form action="enviar_pre.php" method="POST" enctype="multipart/form-data">
+          <table width='600'>
+          <tr style="height:50px">
+              <th align=left>Dia:</th>
+              <th align=left><input type="text" name="idDia" id="idDia"></th>
+            </tr>
+            <tr style="height:50px">
+              <th align=left>Grupo:</th>
+              <th align=left><input type="text" name="idGrupo" id="idGrupo"></th>
+            </tr>
+          </table></br>
+          <button type="submit">Enviar datos </button><br><br>
         <br>
-
-        <button id="BtnAceptar" onclick="EnviarDatos();">Aceptar y enviar.</button>
-
         <br><br>
       </div>
     </center>
@@ -305,8 +315,11 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
 
             if (RevisarFilas(idO, index) == false && RevisarColumnas(idO, index) == false) {
               MostrarAviso();
+            }else{
+              document.getElementById("idDia").value = "Lunes";
+              document.getElementById("idGrupo").value = combo.options[combo.selectedIndex].value;
             }
-
+            
             return;
           }
 
@@ -328,6 +341,9 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
 
             if (RevisarFilas(idO, index) == false && RevisarColumnas(idO, index) == false) {
               MostrarAviso();
+            }else{
+              document.getElementById("idDia").value = "Martes";
+              document.getElementById("idGrupo").value = combo.options[combo.selectedIndex].value;
             }
             return;
           }
@@ -455,6 +471,15 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
       function EnviarDatos() {
         var res = window.confirm("¿Está seguro de enviar este pre-horario?");
         if (res == true) {
+          for (var i = 1; i < 6; i++) {
+            var idLu = "Lu";
+            idLu += i;
+            var idMa = "Ma";
+            idMa += i;
+
+            $dato1 = document.getElementById(idLu).selectedIndex = index;
+            $dato2 = document.getElementById(idMa).selectedIndex = index;
+          }
         }
       }
     </script>
