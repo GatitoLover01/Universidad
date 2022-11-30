@@ -23,9 +23,11 @@ $SQL="INSERT INTO inscripciones (Nombre, Apellido_paterno, Apellido_materno, Cit
 /*$SQL = "INSERT INTO inscripciones (Nombre, Apellido_paterno, Apellido_materno, Curp, Carreras_Id_Carrera) VALUES ('$Name', '$A_P', '$A_M','$img_data', '$idC' )";*/
 
 if ($conexion -> query($SQL)==true){
-  echo "Regristro exitoso";
+echo "<script>alert('Registro exitoso'); window.location.assign('aspirante.php') </script>";
+echo '</script>';  
 }else{
-  echo "Registro error";
+echo "<script>alert('Campos faltantes o datos incorrectos.'); window.location.assign('aspirante.php') </script>";
+echo '</script>';  
 }
 
 ?>

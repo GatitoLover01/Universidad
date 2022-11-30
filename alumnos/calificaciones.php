@@ -38,7 +38,8 @@ $dataAlumnos = mysqli_query($conexion, $sqlDatosAlumno);
     </div>
   </header>
 
-  <div class="alumno">
+ <div class="centrado">
+    <div class="alumno">
     <h1>Calificaciones</h1>
     </br></br>
     <center>
@@ -70,35 +71,8 @@ $dataAlumnos = mysqli_query($conexion, $sqlDatosAlumno);
       </div>
     </center>
   </div>
+ </div>
 
-<div class="datos_alumno">
-    <center>
-      <h2>Datos Alumno</h2></br>
-    </center>
-    <?php $resultadoDatos = mysqli_query($conexion, $sqlDatosAlumno);
-
-    while ($row = mysqli_fetch_assoc($resultadoDatos)) { ?>
-      <h4 class="tabulacion">Matrícula: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Matricula_alumno"]; ?></h4><br>
-      <h4 class="tabulacion">Nombre: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["concat(alumnos.Nombre,' ', Apellido_paterno,' ',Apellido_materno)"]; ?></h4><br>
-      <h4 class="tabulacion">Semestre: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Semestre"]; ?></h4><br>
-      <h4 class="tabulacion">Carrera: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Nombre"]; ?></h4><br>
-      <h4 class="tabulacion">Avance curricular: </h4>
-      </p>
-      <h4 class="tabulacion"><?php echo $row["Avance_curricular"]; ?></h4><br>
-    <?php }
-    mysqli_free_result($resultadoDatos); ?>
-
-  </div>
-
-  </br>
   <style>
     table,
     th,

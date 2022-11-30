@@ -10,6 +10,10 @@ $conexion = mysqli_connect($servername, $username, $password, $database);*/
 
 $sqlCarreras= "SELECT Id_Carrera, Nombre FROM carreras";
 $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
+
+$sqlGenero="SELECT * FROM genero";
+$dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
+
 ?>
 <html>
 
@@ -80,7 +84,7 @@ $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
               <th align=left>Carrera:</th>
               <th align=left><input type="text" name="Carrera" id="Carrera" placeholder="Ingrese el id de la carrera"></th>
               <th align=left>
-            <select name="nombre" class="form-control form-control-sm">
+            <select name="selectCarrera" class="form-control form-control-sm">
                     <option value="">Seleccione la carrera</option>
                     <?php
                       while ($dataSelect = mysqli_fetch_array($dataCarrerasSelect)) { ?>
@@ -105,9 +109,27 @@ $dataCarrerasSelect = mysqli_query($conexion, $sqlCarreras);
             <tr style="height:50px">
               <th align=left>Genero:</th>
               <th align=left><input type="text" name="genero" id="genero"></th>
+              <th align=left>
+                <select name="selectGenero" class="form-control form-control-sm">
+                    <option value="">Seleccione el género</option>
+                    <?php
+                      while ($dataSelectGenero = mysqli_fetch_array($dataGeneroSelect)) { ?>
+                        <option>
+                          <?php 
+                          echo utf8_encode($dataSelectGenero["Id_genero"]);
+                          echo utf8_encode(".-");
+                          echo utf8_encode($dataSelectGenero["Nombre"]); 
+                          
+                          ?>
+                        </option>
+                    <?php 
+
+                  } ?>
+                  </select>
+              </th>
             </tr>
           </table></br>
-          <button type="submit">Enviar datos </button>
+          <button type="submit">Enviar datos </button><br><br>
       </div>
       </form>
 
