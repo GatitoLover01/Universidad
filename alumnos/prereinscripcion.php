@@ -285,9 +285,9 @@ $sqlAsignaturas = "SELECT ID_Grupo, asignaturas.Nombre FROM grupos, asignaturas 
               <th align=left><input type="text" name="idGrupo" id="idGrupo"></th>
             </tr>
           </table></br>
-          <button type="submit">Enviar datos </button><br><br>
+          <button type="submit" class="botonesG">Enviar datos </button><br><br>
         <br>
-        <br><br>
+        <br>
       </div>
     </center>
     <br>

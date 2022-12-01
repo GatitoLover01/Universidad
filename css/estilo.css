@@ -45,7 +45,19 @@ body {
   height: auto;
   text-align: center;
 }
-
+.botonesG {
+  border: none;
+  width: auto;
+  color: white;
+  font-size: 20px;
+  background: #1a2537;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.botonesG:hover {
+  background: cadetblue;
+}
 /*---------SLIDER---------*/
 .slider {
   width: 95%;
@@ -99,7 +111,7 @@ body {
 .alumno {
   text-align: center;
 }
-.alumno_contenedor{
+.alumno_contenedor {
   height: 70%;
 }
 .horario_alumno {

@@ -1,5 +1,6 @@
 <?php
 require('../conexion/conexion.php');
+
 $usuario = $_POST['matricula'];
 $pass = $_POST['pass'];
 if(empty($usuario) || empty($pass)){
@@ -14,11 +15,8 @@ session_start();
 $_SESSION['Matricula_alumno'] = $usuario;
 header("Location:../alumnos/alumno.php");
 }else{
-header("Location:../alumnos/login_alumno.php");
-exit();
+echo "<script>alert('Usuario o contraseña incorrectos'); window.location.assign('../alumnos/login_alumno.php') </script>";
+echo '</script>';  
 }
-}else{
-header("Location:../alumnos/login_alumno.php");
-exit();
 }
 ?>

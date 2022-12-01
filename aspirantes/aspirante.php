@@ -125,7 +125,7 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
               </th>
             </tr>
           </table></br>
-          <button type="submit">Enviar datos </button><br><br>
+          <button type="submit" class="botonesG">Enviar datos </button><br><br>
       </div>
       </form>
 
