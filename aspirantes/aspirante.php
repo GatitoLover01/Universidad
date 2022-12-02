@@ -104,8 +104,8 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
             <tr style="height:50px">
               <th align=left>Genero:</th>
               <th align=left>
-                <select name="selectGenero" class="form-control form-control-sm">
-                    <option value="">Seleccione el género</option>
+                <select id="idGenero" name="selectGenero" class="form-control form-control-sm">
+                    <option selected>Seleccione el género</option>
                     <?php
                       while ($dataSelectGenero = mysqli_fetch_array($dataGeneroSelect)) { ?>
                         <option>
@@ -119,7 +119,7 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
                     <?php 
 
                   } ?>
-              <th align=left><input type="text" name="genero" id="genero"></th>
+              <th align=left><input type="text" name="idGenero" id="idGenero"></th>
               
                   </select>
               </th>
@@ -135,12 +135,7 @@ $dataGeneroSelect = mysqli_query($conexion, $sqlGenero);
   </br></br>
 
   <script type="text/javascript">
-  function mostrarId() {
-    var combo = document.getElementById("idCarrera");
-    var index = combo.options[combo.selectedIndex].index;
 
-    document.getElementById("Carrera").selectedIndex = index;
-  }
   </script>
 
   <footer class="contenedor-footer">
